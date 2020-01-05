@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.UserMapper">
+    <resultMap id="resultAccount" type="com.example.entity.Account">
+        <result property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="userName" column="user_name" />
+        <result property="password" column="password" />
+        <result property="sex" column="sex" />
+        <result property="age" column="age"/>
+        <result property="createTime" column="create_time"/>
+
+    </resultMap>
+
+    <select id="queryAccount" parameterType="com.example.entity.Account" resultType="Integer">
+        select  count(1) from account t where t.user_id=#{userId} and t.password=#{password}
+    </select>
+    <select id="queryMenus" resultType="HashMap">
+        select  * from menus
+    </select>
+
+</mapper>

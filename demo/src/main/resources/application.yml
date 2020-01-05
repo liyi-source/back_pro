@@ -1,0 +1,13 @@
+#开发配置
+spring:
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/ly?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+#公共配置与profiles选择无关
+mybatis:
+  typeAliasesPackage: com.example.liyi.entity
+  mapperLocations: classpath:mapper/*.xml
