@@ -18,7 +18,7 @@
         select  count(1) from account t where t.user_id=#{userId} and t.password=#{password}
     </select>
     <select id="queryMenus" resultType="HashMap">
-        select  * from menus
+        select  *  from menus
     </select>
 
 </mapper>
