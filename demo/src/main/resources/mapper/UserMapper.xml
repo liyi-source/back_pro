@@ -15,7 +15,7 @@
     </resultMap>
 
     <select id="queryAccount" parameterType="com.example.entity.Account" resultType="Integer">
-        select  count(1) from account t where t.user_id=#{userId} and t.password=#{password}
+        select  count(1) from  account t where t.user_id=#{userId} and t.password=#{password}
     </select>
     <select id="queryMenus" resultType="HashMap">
         select  *  from menus
