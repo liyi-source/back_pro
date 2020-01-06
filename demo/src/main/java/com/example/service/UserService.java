@@ -28,7 +28,7 @@ public class UserService {
         return map;
     }
     public List<Map<String,String>> queryMenus(){
-        //查询是否存在该账号密码
+        //查询所有菜单
         List<Map<String,String>> list = userMapper.queryMenus();
         Map<String,String> map=new HashMap<String,String>();
         return list;
